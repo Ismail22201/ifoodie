@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Menu</title>
+  <link rel="stylesheet" href="Menu.css">
+  <script defer src="Menu.js"></script>
+  <script defer src="../adminData.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body onload="fillAdminData()">
+
+  <nav>
+    <label class="logo">iFoodie</label>
+    <ul class="menu">
+      <li>
+        <a href="../Home/Home.html">Home</a>
+      </li>
+      <li>
+        <a class="active" href="Menu.html">Menu</a>
+      </li>
+      <li>
+        <a href="../Contact Us/Contact.html">Contact</a>
+      </li>
+      <li>
+        <a href="../Profile/Profile.html">Profile</a>
+      </li>
+      <li>
+        <a href="../Login/Login.html">Login</a>
+      </li>
+    </ul>
+    <label id="icon">
+      <i class="fas fa-bars"></i>
+    </label>
+  </nav>
+
+  <script>
+    $(document).ready(function () {
+      $('#icon').click(function () {
+        $('ul').toggleClass('show')
+      })
+    })
+    $(function () {
+      $('.menu li').hover(
+        function () {
+          $('>ul.sub', this).slideDown(500); //">" is a child selector
+        },
+        function () {
+          $('>ul.sub', this).slideUp(300);
+        }
+      )
+    })
+  </script>
+
+  <div class="main-title">
+
+    <h1> - MENU - </h1>
+
+  </div>
+
+  <hr>
+  <h2 id="subdivision">Malay Food</h2>
+
+  <div class="foodMenu">
+    <div class="food-items">
+      <img src="pics/Kambing.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Kari Kambing</h5>
+          <h5 class="price"> RM 6.00 </h5>
+        </div>
+        <p></p>
+        <button id="item1Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/Nasi kerabu.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Nasi Kerabu</h5>
+          <h5 class="price"> RM 8.00 </h5>
+        </div>
+        <p> </p>
+        <button id="item2Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/Nasi Ayam.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Nasi Ayam</h5>
+          <h5 class="price"> RM 5.00 </h5>
+        </div>
+        <p></p>
+        <button id="item3Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/Mee Goreng.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Mee goreng</h5>
+          <h5 class="price"> RM 4.00 </h5>
+        </div>
+        <p></p>
+        <button id="item4Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/Rendang.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Rendang</h5>
+          <h5 class="price"> RM 4.00 </h5>
+        </div>
+        <p></p>
+        <button id="item5Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/canai.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Roti Canai</h5>
+          <h5 class="price"> RM 2.00 </h5>
+        </div>
+        <p></p>
+        <button id="item6Btn">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <h2 id="subdivision">Arab Food</h2>
+
+  <div class="foodMenu">
+    <div class="food-items">
+      <img src="pics/shawarma.webp">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Shawarma</h5>
+          <h5 class="price"> RM 5.00 </h5>
+        </div>
+        <p></p>
+        <button id="item7Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/snf.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Shawarma Meal</h5>
+          <h5 class="price"> RM 8.00 </h5>
+        </div>
+        <p> </p>
+        <button id="item8Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/Falafel.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Falafel</h5>
+          <h5 class="price"> RM 3.00 </h5>
+        </div>
+        <p></p>
+        <button id="item9Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/kabsah.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Kabsah</h5>
+          <h5 class="price"> RM 6.00 </h5>
+        </div>
+        <p></p>
+        <button id="item10Btn">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <hr>
+  <h2 id="subdivision">Western Food</h2>
+
+  <div class="foodMenu">
+    <div class="food-items">
+      <img src="pics/Fries.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Fries</h5>
+          <h5 class="price"> RM 3.00 </h5>
+        </div>
+        <p></p>
+        <button id="item11Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/beef.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Beef Burger</h5>
+          <h5 class="price"> RM 5.00 </h5>
+        </div>
+        <p> </p>
+        <button id="item12Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/chicken.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Chicken Burger</h5>
+          <h5 class="price"> RM 5.00 </h5>
+        </div>
+        <p></p>
+        <button id="item13Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/cc.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Chicken Chop</h5>
+          <h5 class="price"> RM 8.00 </h5>
+        </div>
+        <p></p>
+        <button id="item14Btn">Add To Cart</button>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="pics/Ayam Goreng.jpg">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Fried Chicken</h5>
+          <h5 class="price"> RM 4.00 </h5>
+        </div>
+        <p></p>
+        <button id="item15Btn">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <input id="FoodCount" disabled></input>
+  <div class="Error">
+    <p id="CartFull">Cart is full!</p>
+  </div><br>
+  <input type="image" name="CartButton" id="CartButton" src="pics/Cart.jpg" onclick="openCart()">
+
+  <div class="Cart" id="Cart">
+    <center>
+      <h1 class="cart-title"> Cart </h1>
+      <center>
+        <table>
+          <tr>
+            <td>
+              <h4>Items</h4>
+            </td>
+            <td>
+              <h4>Total</h4>
+            </td>
+          </tr>
+          <tr>
+            <td width=300px>
+              <h4 class="items" id="item1"></h4>
+            </td>
+            <td rowspan="10" style="text-align:center" width=100px height=250px>
+              <input id="total" disabled></input>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="items" id="item2"></h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="items" id="item3"></h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="items" id="item4"></h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="items" id="item5"></h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="items" id="item6"></h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="items" id="item7"></h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="items" id="item8"></h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="items" id="item9"></h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="items" id="item10"></h4>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button id="cancelBtn1" onclick="closeCart()">Cancel</button>
+              <button id="emptyBtn" onclick="emptyCart()">Empty Cart</button>
+              <button id="checkoutBtn" onclick="Checkout()">Checkout</button>
+            </td>
+          </tr>
+        </table>
+        <div class="Error">
+          <p id="EmptyCart" style="opacity: 0">Cart is empty!</p>
+        </div><br>
+
+        <div class="Checkout" id="Checkout">
+          <center>
+            <h1 class="checkout-title"> Checkout </h1>
+            <center>
+              <table class="checkoutTbl">
+                <tr>
+                  <td class="checkoutTbl">
+                    <label> Username </label>
+                    <input type="text" id="Username" name="Username">
+                  </td>
+                  <td class="checkoutTbl">
+                    <label> Email Address </label>
+                    <input type="text" id="Email" name="Email">
+                  </td>
+                  <td class="checkoutTbl">
+                    <label> Phone Number </label>
+                    <input type="text" id="Number" name="Number">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="checkoutTbl">
+                    <label> Shipping Address </label><br>
+                    <textarea type="text" id="Address" rows="2" name="Address"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="checkoutTbl">
+                    <label> Card Type </label><br>
+                    <input type="radio" id="VISA" name="card" value="VISA">
+                    <img style="margin-right: 15px" class="cardLogo" src="Pics/VisaLogo.png" alt="VISA Logo">
+                    <input style="margin-left: 15px" type="radio" id="MasterCard" name="card" value="MasterCard">
+                    <img class="cardLogo" src="Pics/MasterCardLogo.png" alt="MasterCard Logo"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="checkoutTbl">
+                    <label> Card Number </label><br>
+                    <input type="text" id="CardNumber" name="CardNumber" maxlength="16"
+                      onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                  </td>
+                  <td class="checkoutTbl">
+                    <label> Expiry Date </label><br>
+                    <select id="Month" name="Month" width=75px>
+                      <option>Month</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <select id="Year" name="Year">
+                      <option>Year</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                      <option value="2026">2026</option>
+                      <option value="2027">2027</option>
+                      <option value="2028">2028</option>
+                      <option value="2029">2029</option>
+                      <option value="2030">2030</option>
+                    </select>
+                  </td>
+                  <td class="checkoutTbl">
+                    <label> Card CVV2/CVC2/4DBC </label><br>
+                    <input type="text" id="CardSecurityNum" name="CardSecurityNum" maxlength="3"
+                      onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="checkoutTbl">
+                    <button id="cancelBtn2" onclick="closeCart()">Cancel</button>
+                    <button id="PayButton" onclick="pay()">Pay</button>
+                    <button id="PayOfflineButton" onclick="payOffline()">Pay-On-Delivery</button>
+                  </td>
+                </tr>
+              </table>
+              <div class="Error">
+                <p id="InvalidFields" style="opacity: 0"></p>
+              </div><br>
+
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="Contact.css">
+    <script defer src="Contact.js"></script>
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <label class="logo">iFoodie</label>
+      <ul class="menu">
+        <li>
+          <a href="../Home/Home.html">Home</a>
+        </li>
+        <li>
+          <a href="../Menu/Menu.html">Menu</a>
+        </li>
+        <li>
+          <a class="active" href="Contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="../Profile/Profile.html">Profile</a>
+        </li>
+        <li>
+          <a href="../Login/Login.html">Login</a>
+        </li>
+      </ul>
+      <label id="icon">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
+
+    <script>
+    $(document).ready(function(){
+      $('#icon').click(function(){
+        $('ul').toggleClass('show')
+      })
+    })
+    $(function () {
+      $('.menu li').hover(
+        function()
+        {
+          $('>ul.sub',this).slideDown(500); //">" is a child selector
+        },
+        function()
+        {
+          $('>ul.sub',this).slideUp(300);
+        }
+      )
+    })
+    </script>
+
+    <center><h1 class="main-title"> Contact Us </h1><center>
+
+  <main id="main">
+    <center><h1 class="title"></h1><center>
+
+        <div class="container">
+          <br></br>
+          <button type="submit" id="SupportContactButton">SUPPORT</button>
+        </div>
+
+    </main>
+
+    <main id="main2">
+      <center><h1 class="title"></h1><center>
+
+          <div class="container">
+            <br></br>
+            <button type="submit" id="DevContactButton">DEVELOPER</button>
+          </div>
+
+      </main>
+
+  </body>
+
+</html>

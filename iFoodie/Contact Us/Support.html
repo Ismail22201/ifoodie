@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Support</title>
+    <link rel="stylesheet" href="Support.css">
+    <script defer src="Support.js"></script>
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <label class="logo">iFoodie</label>
+      <ul class="menu">
+        <li>
+          <a href="../Home/Home.html">Home</a>
+        </li>
+        <li>
+          <a href="../Menu/Menu.html">Menu</a>
+        </li>
+        <li>
+          <a class="active" href="Contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="../Profile/Profile.html">Profile</a>
+        </li>
+        <li>
+          <a href="../Login/Login.html">Login</a>
+        </li>
+      </ul>
+      <label id="icon">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
+
+    <script>
+    $(document).ready(function(){
+      $('#icon').click(function(){
+        $('ul').toggleClass('show')
+      })
+    })
+    $(function () {
+      $('.menu li').hover(
+        function()
+        {
+          $('>ul.sub',this).slideDown(500); //">" is a child selector
+        },
+        function()
+        {
+          $('>ul.sub',this).slideUp(300);
+        }
+      )
+    })
+    </script>
+
+    <center><h1 class="main-title"> Contact Us </h1><center>
+
+  <main id="main">
+    <center><h1 class="title"> Support </h1><center>
+
+      <table style="width:100%">
+
+        <tr>
+          <th>Our Support Team</th>
+          <th>Customer Service Executive</th>
+          <th>Information Desk</th>
+        </tr>
+        <tr>
+          <th>support@ifoodie.com</th>
+          <th>HARIS --> +60123456789</th>
+          <th>info@ifoodie.com</th>
+        </tr>
+
+      </table>
+      <form id="ContactForm" onsubmit="javascript:sending();">
+
+        <div class="container">
+          <label> First Name </label>
+          <input type="text" id="fname" placeholder="Enter First Name" class="loginField" name="FirstName" required>
+          <br></br>
+          <label> Last Name </label>
+          <input type="text" id="lname" class="loginField" placeholder="Enter Last Name" name="LastName" required>
+          <br></br>
+          <label> Email </label>
+          <input type="email" id="email" class="loginField" placeholder="Enter Email" name="Email" required>
+          <br></br>
+          <label for="subject">Inquiry </label>
+          <textarea id="subject" class="loginField" placeholder="How can we help you?" name="Inquiry" required style="height:200px"></textarea>
+          <br></br>
+          <button type="submit" value="submit" id="SendButton" onclick="javascript:checkError();">SEND</button>
+          <br></br>
+          <button type="submit" value="cancel" id="BackButton" formnovalidate>BACK</button>
+        </div>
+
+      </form>
+
+      <div id="ErrorBox">
+        <p id="TheError">Incomplete Fields. <span id="Retry">Please try again.</span></p>
+      </div>
+
+    </main>
+
+
+  </body>
+
+</html>

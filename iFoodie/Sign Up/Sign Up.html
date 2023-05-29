@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Sign Up.css">
+    <script defer src="Sign Up.js"></script>
+    <script defer src="../adminData.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <nav>
+      <label class="logo">iFoodie</label>
+      <ul class="menu">
+        <li>
+          <a href="../Home/Home.html">Home</a>
+        </li>
+        <li>
+          <a href="../Menu/Menu.html">Menu</a>
+        </li>
+        <li>
+          <a href="../Contact Us/Contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="../Profile/Profile.html">Profile</a>
+        </li>
+        <li>
+          <a class="active" href="../Login/Login.html">Login</a>
+        </li>
+      </ul>
+      <label id="icon">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
+
+    <script>
+    $(document).ready(function(){
+      $('#icon').click(function(){
+        $('ul').toggleClass('show')
+      })
+    })
+    $(function () {
+      $('.menu li').hover(
+        function()
+        {
+          $('>ul.sub',this).slideDown(500); //">" is a child selector
+        },
+        function()
+        {
+          $('>ul.sub',this).slideUp(300);
+        }
+      )
+    })
+    </script>
+
+    <center><h1 class="main-title"> Sign Up </h1><center>
+
+      <main id="main">
+          <form id="SignUpForm">
+            <div class="container">
+
+              <label> Username </label>
+              <input type="text" id="Username" class="loginField" placeholder="Enter Username" name="Username" required>
+
+              <div class="Error">
+                <p id="TakenUsername" style="opacity: 0">Username Taken!</p>
+              </div><br>
+
+              <label> Password </label>
+              <input type="text" id="Password" class="loginField" placeholder="Enter Password" name="Password" required>
+
+              <div class="Error">
+                <p id="TakenPassword" style="opacity: 0">Password Taken!</p>
+              </div><br>
+
+              <label> Retype Password </label>
+              <input type="text" id="RetypePassword" class="loginField" placeholder="Retype Password" name="RetypePassword" required>
+
+              <div class="Error">
+                <p id="DiffersPassword" style="opacity: 0">Password Differs!</p>
+              </div><br>
+
+              <button id="SignUpButton">Sign Up</button><br><br>
+
+              <label>Already have an account?</label>
+              <a href="../Login/Login.html">Login</a>
+
+              <div class="Error">
+                <p id="BlankFields" style="opacity: 0">Please fill in all fields!</p>
+              </div>
+
+            </div>
+          </form>
+      </main>
+
+  </body>
+</html>

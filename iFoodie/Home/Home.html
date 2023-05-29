@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link rel="stylesheet" href="Home.css">
+    <script defer src="Home.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <label class="logo">iFoodie</label>
+      <ul class="menu">
+        <li>
+          <a class="active" href="Home.html">Home</a>
+        </li>
+        <li>
+          <a href="../Menu/Menu.html">Menu</a>
+        </li>
+        <li>
+          <a href="../Contact Us/Contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="../Profile/Profile.html">Profile</a>
+        </li>
+        <li>
+          <a href="../Login/Login.html">Login</a>
+        </li>
+      </ul>
+      <label id="icon">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
+
+    <script>
+    $(document).ready(function(){
+      $('#icon').click(function(){
+        $('ul').toggleClass('show')
+      })
+    })
+    $(function () {
+      $('.menu li').hover(
+        function()
+        {
+          $('>ul.sub',this).slideDown(500); //">" is a child selector
+        },
+        function()
+        {
+          $('>ul.sub',this).slideUp(300);
+        }
+      )
+    })
+    </script>
+
+    <center><h1 class="main-title"> Welcome to iFoodie! </h1><center>
+    <center><p class="intro">
+      Are you so busy that you were unable to find time to go to the
+      cafeteria to buy food? Or you would like to minimize contact with
+      other people, especially during this Covid-19 situation? <br><br>
+      Well that is what iFoodie is about! We aim to make it easier and
+      safer for the IIUM community to buy their meals!
+    </p><center>
+
+    <table>
+      <tr>
+        <td colspan="2" style="background-image: url('../Menu/Pics/Nasi Ayam.jpg')">
+          <h2 class="caption" >Hungry? Check out our menu!</h2>
+        </td>
+        <td>
+          <img class="icons" src="Pics/MENU.png" alt="Menu"><br>
+          <button id="menuBtn">MENU</button>
+        </td>
+        <td style="background-image: url('../Menu/Pics/Nasi kerabu.jpg')">
+        </td>
+      </tr>
+      <tr>
+        <td style="background-image: url('../Menu/Pics/cc.jpg')">
+        </td>
+        <td>
+          <img class="icons" src="Pics/PROFILE.png" alt="Sign Up"><br>
+          <button id="signupBtn">SIGN UP</button>
+        </td>
+        <td colspan="2" style="background-image: url('../Menu/Pics/snf.jpg')">
+          <h2 class="caption">Don't have an account? Create one!</h2>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="background-image: url('../Menu/Pics/Fries.jpg')">
+          <h2 class="caption">Need Help? Feel free to conact us!</h2>
+        </td>
+        <td>
+          <img class="icons" src="Pics/CONTACT.png" alt="Contact"><br>
+          <button id="contactBtn">CONTACT US</button>
+        </td>
+        <td style="background-image: url('../Menu/Pics/beef.jpg')">
+        </td>
+      </tr>
+    </table>
+
+</html>

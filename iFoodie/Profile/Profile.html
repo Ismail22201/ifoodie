@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="Profile.css">
+    <script defer src="Profile.js"></script>
+    <script defer src="../adminData.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/black-tie/jquery-ui.min.css" rel="stylesheet">
+  </head>
+  <body onload = "fillAdminData()">
+    <nav>
+      <label class="logo">iFoodie</label>
+      <ul class="menu">
+        <li>
+          <a href="../Home/Home.html">Home</a>
+        </li>
+        <li>
+          <a href="../Menu/Menu.html">Menu</a>
+        </li>
+        <li>
+          <a href="../Contact Us/Contact.html">Contact</a>
+        </li>
+        <li>
+          <a class="active" href="Profile.html">Profile</a>
+        </li>
+        <li>
+          <a href="../Login/Login.html">Login</a>
+        </li>
+      </ul>
+      <label id="icon">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
+
+    <script>
+  $(document).ready(function(){
+    $('#icon').click(function(){
+      $('ul').toggleClass('show')
+    })
+  })
+  $(function () {
+    $('.menu li').hover(
+      function()
+      {
+        $('>ul.sub',this).slideDown(500); //">" is a child selector
+      },
+      function()
+      {
+        $('>ul.sub',this).slideUp(300);
+      }
+    )
+  })
+  </script>
+
+  <center><h1 class="main-title"> Profile </h1><center>
+
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Personal Details</a></li>
+      <li><a href="#tabs-2">Payment Method</a></li>
+    </ul>
+    <div id="tabs-1">
+      <center><h2 class="title"> Personal Details </h2><center>
+      <table>
+        <tr>
+          <td width = 500px>
+            <label> Username </label>
+            <input type="text" id="Username" name="Username" disabled>
+          </td>
+          <td width = 500px>
+            <label> Password </label>
+            <input type="text" id="Password" name="Password" disabled>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label> Email Address </label>
+            <input type="text" id="Email" name="Email" disabled>
+          </td>
+          <td>
+            <label> Phone Number </label>
+            <input type="text" id="Number" name="Number" disabled>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <label> Shipping Address </label>
+            <textarea type="text" id="Address" rows="5" name="Address" disabled></textarea><br>
+            <button id="EditButton1">Edit</button>
+            <button id="SaveButton1">Save</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="tabs-2">
+      <center><h2 class="title"> Payment Method </h2><center>
+        <table>
+          <tr>
+            <td width = 500px>
+              <br><label> Card Type </label><br><br>
+              <input type="radio" id="VISA" name="card" value="VISA" disabled>
+              <img style="margin-right: 15px" class="cardLogo" src="VisaLogo.png" alt="VISA Logo">
+              <input style="margin-left: 15px" type="radio" id="MasterCard" name="card" value="MasterCard" disabled>
+              <img class="cardLogo" src="MasterCardLogo.png" alt="MasterCard Logo">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br><label> Card Number </label><br>
+              <input type="text" id="CardNumber" name="CardNumber" maxlength="16" disabled onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br><label> Expiry Date </label><br>
+              <select id="Month" name="Month" disabled>
+                <option>Month</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select id="Year" name="Year" disabled>
+                <option>Year</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br><label> Card CVV2/CVC2/4DBC </label><br>
+              <input type="text" id="CardSecurityNum" name="CardSecurityNum" disabled maxlength="3" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"><br>
+              <button id="EditButton2">Edit</button>
+              <button id="SaveButton2">Save</button>
+            </td>
+          </tr>
+        </table>
+    </div>
+  </div>
+
+  </body>
+</html>
